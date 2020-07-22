@@ -9,12 +9,11 @@ jobs:
     name: Test on Linux
     runs-on: ubuntu-latest
     strategy:
-    container:
-      image: swift:${{ matrix.swift_image }}
-    strategy:
       fail-fast: false
       matrix:
         swift_image: ["5.0", "5.1", "5.2"]
+    container:
+      image: swift:${{ matrix.swift_image }}
     steps:
       - uses: actions/checkout@v2
       - name: Show version
