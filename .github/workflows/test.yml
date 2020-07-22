@@ -23,7 +23,7 @@ jobs:
           swift --version
       - name: Run test
         run: swift test
-  mac:
+  macos:
     name: Test on macOS
     runs-on: macos-latest
     strategy:
