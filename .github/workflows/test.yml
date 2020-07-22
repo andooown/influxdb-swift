@@ -11,9 +11,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        swift_image: ["5.0", "5.1", "5.2"]
+        swift_image: 
+          - "swift:5.2"
+          - "swiftlang/swift:nightly-5.3-bionic"
     container:
-      image: swift:${{ matrix.swift_image }}
+      image: ${{ matrix.swift_image }}
     steps:
       - uses: actions/checkout@v2
       - name: Show version
@@ -27,7 +29,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        xcode_version: ["11.5"]
+        xcode_version: 
+          - "11.5"
     steps:
       - uses: actions/checkout@v2
       - name: Select Xcode
