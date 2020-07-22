@@ -38,6 +38,6 @@ jobs:
       - name: Show versions
         run: |
           swift --version
-          xcodebuild --version
+          xcodebuild -version
       - name: Run test
         run: swift test
