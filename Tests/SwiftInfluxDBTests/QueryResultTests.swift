@@ -38,4 +38,8 @@ class QueryResultTests: XCTestCase {
         XCTAssertEqual(table[recordAt: 1].values,
                        ["", "", "0", "NOAA_water_database/autogen", "", "", "autogen", "0"])
     }
+
+    static var allTests = [
+        ("testParseResponse1", testParseResponse1)
+    ]
 }
